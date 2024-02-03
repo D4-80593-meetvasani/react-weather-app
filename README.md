@@ -17,7 +17,7 @@ Crafted an elegant React weather app with OpenWeather API and React hooks. This 
 
 ## Live Demo
 
-The project is hosted on Netlify. You can access it [here](#) (insert your Netlify link).
+The project is hosted on Netlify. You can access it [here](https://reactt-weather.netlify.app/) (insert your Netlify link).
 
 ## Getting Started
 
