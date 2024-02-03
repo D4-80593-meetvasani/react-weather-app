@@ -1,6 +1,6 @@
 // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=f5bf02d39c705659b32c45faef59151a
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Weathercard from "./weathercard";
 import "./style.css";
 
@@ -9,7 +9,7 @@ const Temperature = () => {
 
   const [ tempInfo , setTempInfo ] = useState({});
 
-  const getWeatherInfo = async () => {
+  const getWeatherInfo = useCallback(async () => {
     try {
       let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=f5bf02d39c705659b32c45faef59151a`;
 
@@ -42,7 +42,7 @@ const Temperature = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [searchValue]); 
 
   useEffect(() => {
     getWeatherInfo();
