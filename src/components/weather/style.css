@@ -186,15 +186,20 @@ body {
   margin-bottom: 50px;
 }
 
+
+/* Updated Media Query for Phone Screens */
+
 @media only screen and (max-width: 768px) {
   body {
     height: auto;
     min-height: auto;
+    font-family: var(--font-fam); /* Apply custom font for better readability */
   }
 
   .widget {
     width: 100%;
     height: auto;
+    border-radius: 10px; /* Add slight border radius for a softer look */
   }
 
   .widget .weatherIcon,
@@ -202,47 +207,60 @@ body {
   .widget .date,
   .widget .extra-temp {
     flex: 1 100%;
+    border-radius: 0; /* Remove border radius for individual sections */
   }
 
-  .widget .weatherIcon,
-  .widget .weatherInfo,
-  .widget .date,
-  .widget .extra-temp {
-    border-radius: 0;
+  .widget .weatherIcon {
+    font-size: 80px; /* Adjust the icon size */
+  }
+
+  .widget .weatherInfo {
+    padding: 20px;
+    text-align: center;
   }
 
   .widget .weatherInfo .temperature {
-    font-size: 35px;
+    font-size: 50px;
   }
 
   .widget .weatherInfo .description .weatherCondition {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
   }
 
   .widget .weatherInfo .description .place {
-    font-size: 12px;
-  }
-
-  .widget .date {
-    font-size: 20px;
-  }
-
-  .widget .extra-temp p {
-    font-size: 15px;
-  }
-
-  .searchTerm {
-    width: 70%;
-  }
-
-  .searchButton {
-    width: 60px;
-    height: 24px;
     font-size: 14px;
   }
 
+  .widget .date {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .widget .extra-temp p {
+    font-size: 14px;
+  }
+
+  .search {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .searchTerm {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .searchButton {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+  }
+
   .wrap {
-    margin-top: -50px;
+    margin-top: -20px;
     margin-bottom: 20px;
   }
 }
